@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF001DD5735A004DB2B0 /* WBTabBarViewController.swift */; };
+		5175AF051DD597E7004DB2B0 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF041DD597E7004DB2B0 /* WBHomeViewController.swift */; };
+		5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */; };
+		5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */; };
+		5175AF0F1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */; };
+		5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */; };
 		517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */; };
-		517A6BA21DD446FD0045EB3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A6BA11DD446FD0045EB3C /* ViewController.swift */; };
-		517A6BA51DD446FD0045EB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517A6BA31DD446FD0045EB3C /* Main.storyboard */; };
 		517A6BA71DD446FE0045EB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517A6BA61DD446FE0045EB3C /* Assets.xcassets */; };
-		517A6BAA1DD446FE0045EB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517A6BA81DD446FE0045EB3C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5175AF001DD5735A004DB2B0 /* WBTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarViewController.swift; sourceTree = "<group>"; };
+		5175AF041DD597E7004DB2B0 /* WBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
+		5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNegotiationViewController.swift; sourceTree = "<group>"; };
+		5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNaviationViewController.swift; sourceTree = "<group>"; };
+		5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeClassTableViewCell.swift; sourceTree = "<group>"; };
+		5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBGridView.swift; sourceTree = "<group>"; };
 		517A6B9C1DD446FD0045EB3C /* swift_58.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_58.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		517A6BA11DD446FD0045EB3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		517A6BA41DD446FD0045EB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		517A6BA61DD446FE0045EB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		517A6BA91DD446FE0045EB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		517A6BAB1DD446FE0045EB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +41,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5175AEFD1DD56C31004DB2B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5175AF081DD59A69004DB2B0 /* Controller */,
+				5175AF0A1DD59A7C004DB2B0 /* View */,
+				5175AF091DD59A77004DB2B0 /* Model */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		5175AF081DD59A69004DB2B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5175AF041DD597E7004DB2B0 /* WBHomeViewController.swift */,
+				5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5175AF091DD59A77004DB2B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5175AF0A1DD59A7C004DB2B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */,
+				5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5175AF0B1DD59AAF004DB2B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */,
+				5175AF001DD5735A004DB2B0 /* WBTabBarViewController.swift */,
+				5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		517A6B931DD446FC0045EB3C = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +105,9 @@
 		517A6B9E1DD446FD0045EB3C /* swift_58 */ = {
 			isa = PBXGroup;
 			children = (
-				517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */,
-				517A6BA11DD446FD0045EB3C /* ViewController.swift */,
-				517A6BA31DD446FD0045EB3C /* Main.storyboard */,
+				5175AEFD1DD56C31004DB2B0 /* Home */,
+				5175AF0B1DD59AAF004DB2B0 /* Main */,
 				517A6BA61DD446FE0045EB3C /* Assets.xcassets */,
-				517A6BA81DD446FE0045EB3C /* LaunchScreen.storyboard */,
 				517A6BAB1DD446FE0045EB3C /* Info.plist */,
 			);
 			path = swift_58;
@@ -96,6 +145,7 @@
 				TargetAttributes = {
 					517A6B9B1DD446FD0045EB3C = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S53J23VP75;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,9 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517A6BAA1DD446FE0045EB3C /* LaunchScreen.storyboard in Resources */,
 				517A6BA71DD446FE0045EB3C /* Assets.xcassets in Resources */,
-				517A6BA51DD446FD0045EB3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +184,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517A6BA21DD446FD0045EB3C /* ViewController.swift in Sources */,
+				5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */,
+				5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */,
 				517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */,
+				5175AF051DD597E7004DB2B0 /* WBHomeViewController.swift in Sources */,
+				5175AF0F1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift in Sources */,
+				5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */,
+				5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		517A6BA31DD446FD0045EB3C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				517A6BA41DD446FD0045EB3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		517A6BA81DD446FE0045EB3C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				517A6BA91DD446FE0045EB3C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		517A6BAC1DD446FE0045EB3C /* Debug */ = {
@@ -260,11 +294,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = S53J23VP75;
 				INFOPLIST_FILE = swift_58/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.xzt.swift-58";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -272,11 +309,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = S53J23VP75;
 				INFOPLIST_FILE = swift_58/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.xzt.swift-58";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -299,6 +339,7 @@
 				517A6BB01DD446FE0045EB3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

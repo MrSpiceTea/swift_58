@@ -9,14 +9,32 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate ,UITabBarControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        
+        configAppearance()
+        let tabBarController = WBTabBarViewController()
+        tabBarController.delegate = self
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    func configAppearance() {
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = UIColor.orange
+        navBar.tintColor = UIColor.red
+        navBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 17)]
+        
+        let tabItem = UITabBarItem.appearance()
+        tabItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .selected)
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
