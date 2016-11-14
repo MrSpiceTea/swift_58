@@ -1,14 +1,14 @@
 //
-//  WBHomeClassTableViewCell.swift
+//  WBHomeHistoryCell.swift
 //  swift_58
 //
-//  Created by Mr.Xie on 2016/11/11.
+//  Created by Mr.Xie on 2016/11/14.
 //  Copyright © 2016年 xzt. All rights reserved.
 //
 
 import UIKit
 
-class WBHomeClassTableViewCell: UITableViewCell {
+class WBHomeHistoryCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

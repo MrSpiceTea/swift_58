@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51759CB71DD952D7003FBFB2 /* WBHomeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */; };
+		51759CBB1DD9583C003FBFB2 /* WBHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51759CBA1DD9583C003FBFB2 /* WBHomeMenuCell.swift */; };
+		51759CBD1DD96E04003FBFB2 /* WBMenuBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51759CBC1DD96E04003FBFB2 /* WBMenuBtnView.swift */; };
 		5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF001DD5735A004DB2B0 /* WBTabBarViewController.swift */; };
 		5175AF051DD597E7004DB2B0 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF041DD597E7004DB2B0 /* WBHomeViewController.swift */; };
 		5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */; };
 		5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */; };
-		5175AF0F1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */; };
 		5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */; };
 		517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */; };
 		517A6BA71DD446FE0045EB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517A6BA61DD446FE0045EB3C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeHistoryCell.swift; sourceTree = "<group>"; };
+		51759CBA1DD9583C003FBFB2 /* WBHomeMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeMenuCell.swift; sourceTree = "<group>"; };
+		51759CBC1DD96E04003FBFB2 /* WBMenuBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMenuBtnView.swift; sourceTree = "<group>"; };
 		5175AF001DD5735A004DB2B0 /* WBTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarViewController.swift; sourceTree = "<group>"; };
 		5175AF041DD597E7004DB2B0 /* WBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
 		5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNegotiationViewController.swift; sourceTree = "<group>"; };
 		5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNaviationViewController.swift; sourceTree = "<group>"; };
-		5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeClassTableViewCell.swift; sourceTree = "<group>"; };
 		5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBGridView.swift; sourceTree = "<group>"; };
 		517A6B9C1DD446FD0045EB3C /* swift_58.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_58.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +74,10 @@
 		5175AF0A1DD59A7C004DB2B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5175AF0E1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift */,
 				5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */,
+				51759CBC1DD96E04003FBFB2 /* WBMenuBtnView.swift */,
+				51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */,
+				51759CBA1DD9583C003FBFB2 /* WBHomeMenuCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -187,9 +193,11 @@
 				5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */,
 				5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */,
 				517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */,
+				51759CBD1DD96E04003FBFB2 /* WBMenuBtnView.swift in Sources */,
 				5175AF051DD597E7004DB2B0 /* WBHomeViewController.swift in Sources */,
-				5175AF0F1DD5AE90004DB2B0 /* WBHomeClassTableViewCell.swift in Sources */,
+				51759CBB1DD9583C003FBFB2 /* WBHomeMenuCell.swift in Sources */,
 				5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */,
+				51759CB71DD952D7003FBFB2 /* WBHomeHistoryCell.swift in Sources */,
 				5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

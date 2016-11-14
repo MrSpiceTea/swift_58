@@ -31,26 +31,47 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         tableView.dataSource = self;
         tableView.frame = self.view.frame
 //        tableView.register(WBHomeClassTableViewCell().self, forCellReuseIdentifier: fcell)
+        
         self.view.addSubview(tableView)
     }
     
     // MARK: TableViewDelegate
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        if section == 0 {
+            return 1
+        }
+        return 2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 160
+        }
         return 44
     }
     
     // MARK: TableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var tableCell = tableView.dequeueReusableCell(withIdentifier: fcell)
-        if (tableCell == nil){
-            tableCell = UITableViewCell()
+        if indexPath.section == 0 {
+            var tableCell = tableView.dequeueReusableCell(withIdentifier: fcell)
+            if (tableCell == nil){
+                tableCell = WBHomeMenuCell()
+            }
+            tableCell?.textLabel?.text = "hello world"
+            return tableCell!
+        }else{
+            var tableCell = tableView.dequeueReusableCell(withIdentifier: fcell)
+            if (tableCell == nil){
+                tableCell = UITableViewCell()
+            }
+            tableCell?.textLabel?.text = "hello"
+            return tableCell!
+
         }
-        tableCell?.textLabel?.text = "hello world"
-        return tableCell!
     }
 
 }
