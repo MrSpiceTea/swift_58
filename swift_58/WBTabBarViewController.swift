@@ -24,10 +24,17 @@ class WBTabBarViewController: UITabBarController {
     
     func initViewController() {
         addViewController(vc: WBHomeViewController(), title: "首页", defaultImage: "home-default", highlightImage: "home-highlight")
-        addViewController(vc: WBNegotiationViewController(), title: "发现", defaultImage: "negotiation-default", highlightImage: "negotiation-highlight")
+        addViewControllerWithNav(vc: WBNegotiationViewController(), title: "发现", defaultImage: "negotiation-default", highlightImage: "negotiation-highlight")
+    }
+    
+    private func addViewController(vc:UIViewController,title:String,defaultImage:String,highlightImage:String) {
+        vc.title = title
+        vc.tabBarItem.image = UIImage(named:defaultImage)
+        vc.tabBarItem.selectedImage = UIImage(named:highlightImage)?.withRenderingMode(.alwaysOriginal)
+        self.addChildViewController(vc)
     }
 
-    func addViewController(vc:UIViewController,title:String,defaultImage:String,highlightImage:String) {
+    private func addViewControllerWithNav(vc:UIViewController,title:String,defaultImage:String,highlightImage:String) {
         vc.title = title
         vc.tabBarItem.image = UIImage(named:defaultImage)
         vc.tabBarItem.selectedImage = UIImage(named:highlightImage)?.withRenderingMode(.alwaysOriginal)

@@ -10,9 +10,6 @@ import UIKit
 
 class WBHomeMenuCell: UITableViewCell {
     
-    let kScreenWidth = UIScreen.main.bounds.size.width
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,9 +23,7 @@ class WBHomeMenuCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for i in 0...9 {
-            let view = WBMenuBtnView.init()
-            print(WBMenuBtnView.sayHello("ff"))
-            view.backgroundColor = UIColor.red
+            let view = WBMenuBtnView.init(title: "二手货", imageStr: "glsale")
             view.tag = i
             if i<5 {
                 view.frame = CGRect(x: CGFloat(i)*kScreenWidth/5, y: 0, width: kScreenWidth/5, height: 80)
@@ -39,7 +34,6 @@ class WBHomeMenuCell: UITableViewCell {
             let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(menuViewTapped(_:)))
             view.addGestureRecognizer(tapGesture)
             self.contentView.addSubview(view)
-            print(i,CGFloat(i)*kScreenWidth/5)
         }
     }
     
