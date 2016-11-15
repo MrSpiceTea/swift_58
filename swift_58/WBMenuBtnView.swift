@@ -14,18 +14,23 @@ class WBMenuBtnView: UIView {
     let imageView = UIImageView.init()
     let imageHeight = 46
     
+    func initWithTitleAndImage(title:String,imageStr:String) -> UIView{
+        titleLabel.text? = title
+        imageView.image = UIImage.init(named: imageStr)
+        self.addSubview(titleLabel)
+        self.addSubview(imageView)
+        return self
+    }
+    
+    func sayHello(personName: String) -> String {
+        return "Hello again, " + personName + "!"
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
      
     }
     
-    func initWithTitleAndImage(title:String,imageStr:String) {
-        titleLabel.text? = title
-        imageView.image = UIImage.init(named: imageStr)
-        self.addSubview(titleLabel)
-        self.addSubview(imageView)
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -33,7 +38,9 @@ class WBMenuBtnView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-       
+        imageView.frame.size = CGSize(width: imageHeight, height: imageHeight)
+        imageView.center = CGPoint(x:self.frame.width/2,y:self.frame.height/2)
+        
     }
     
 }

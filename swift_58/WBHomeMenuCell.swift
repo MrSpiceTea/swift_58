@@ -26,7 +26,8 @@ class WBHomeMenuCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for i in 0...9 {
-            let view = UIView()
+            let view = WBMenuBtnView.init()
+            print(WBMenuBtnView.sayHello("ff"))
             view.backgroundColor = UIColor.red
             view.tag = i
             if i<5 {
