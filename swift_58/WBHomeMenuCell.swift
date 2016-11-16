@@ -8,6 +8,8 @@
 
 import UIKit
 
+let WBHomeMenuCellID = "WBHomeMenuCell"
+
 class WBHomeMenuCell: UITableViewCell {
     
     override func awakeFromNib() {
@@ -23,7 +25,8 @@ class WBHomeMenuCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for i in 0...9 {
-            let view = WBMenuBtnView.init(title: "二手货", imageStr: "glsale")
+            let dic = self.dataSource[i]
+            let view = WBMenuBtnView.init(title: dic[0], imageStr: dic[1])
             view.tag = i
             if i<5 {
                 view.frame = CGRect(x: CGFloat(i)*kScreenWidth/5, y: 0, width: kScreenWidth/5, height: 80)
@@ -44,6 +47,21 @@ class WBHomeMenuCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private lazy var dataSource: Array = { () -> [Array<String>] in
+        var dataSourceArray = [["二手物品","sale_maincate"],
+                               ["租房","zufang_maincate"],
+                               ["二手房","house_maincate"],
+                               ["全职招聘","job_maincate"],
+                               ["兼职","jianzhi_maincate"],
+                               ["二手车","car_maincate"],
+                               ["宠物","pets_maincate"],
+                               ["家政","jianzhi_maincate"],
+                               ["本地服务","shangjie_maincate"],
+                               ["更多","more_maincate"]]
+        
+        return dataSourceArray
+    }()
 
 }
 

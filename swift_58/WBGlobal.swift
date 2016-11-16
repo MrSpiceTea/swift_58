@@ -9,6 +9,7 @@
 import UIKit
 
 let kScreenWidth = UIScreen.main.bounds.size.width
+let kNavBarHeight:CGFloat = 44
 
 func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor {
     return UIColor.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
@@ -16,4 +17,8 @@ func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor {
 
 func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
      return UIColor.init(red: r/255, green: g/255, blue: b/255, alpha: a)
+}
+
+func PNG(imageStr:String)->UIImage{
+    return UIImage.init(named: imageStr)!
 }
