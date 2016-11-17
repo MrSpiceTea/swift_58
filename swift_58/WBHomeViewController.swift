@@ -27,14 +27,12 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func layoutUI(){
-        let tableView = UITableView()
+        let tableView = UITableView.init(frame: self.view.frame, style: .grouped)
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.frame = self.view.frame
         tableView.contentInset = UIEdgeInsetsMake(tableOffsetY, 0, 0, 0)
-//        tableView.register(WBHomeTopLineCell(), forCellReuseIdentifier: WBHomeTopLineCellID)
-        
-
+        tableView.register(WBHomeTopLineCell.self, forCellReuseIdentifier: WBHomeTopLineCellID)
+        tableView.register(WBHomeMenuCell.self, forCellReuseIdentifier: WBHomeMenuCellID)
         
         self.view.addSubview(tableView)
         self.view.addSubview(self.homeHeadView)
@@ -55,7 +53,7 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 175
-        }else if indexPath.section == 1{
+        }else if indexPath.section == 1 || indexPath.section == 2{
             return 70
         }
         return 44
@@ -63,7 +61,7 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offy:CGFloat = -scrollView.contentOffset.y-tableOffsetY
-        print(offy)
+//        print(offy)
         if offy > -40{
             self.homeHeadView.frame.origin.y = -100+offy
         }else{
@@ -81,21 +79,25 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     // MARK: TableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            var tableCell = tableView.dequeueReusableCell(withIdentifier: WBHomeMenuCellID)
-            if (tableCell == nil){
-                tableCell = WBHomeMenuCell()
-            }
+            let tableCell = tableView.dequeueReusableCell(withIdentifier: WBHomeMenuCellID)
             return tableCell!
         }else if indexPath.section == 1{
-            var tableCell = tableView.dequeueReusableCell(withIdentifier: WBHomeTopLineCellID)
-            if (tableCell == nil){
-                tableCell = WBHomeTopLineCell()
-            }
+            let tableCell = tableView.dequeueReusableCell(withIdentifier: WBHomeTopLineCellID)
             tableCell?.imageView?.image = PNG(imageStr: "gleducation")
             tableCell?.textLabel?.text = "test"
             return tableCell!
-        }else{
+        }else if indexPath.section == 2 && indexPath.row == 0{
             var tableCell = tableView.dequeueReusableCell(withIdentifier: fcell)
+            if (tableCell == nil){
+                tableCell = UITableViewCell()
+            }
+            let cycleScrollView = ZTCycleScrollView.init(frame: CGRect(x:0,y:0,width:kScreenWidth,height:70), placeholderImage: PNG(imageStr: "gl"))
+            let testImages = ["test1","test2","test3"]
+            cycleScrollView.imageGroup = testImages
+            tableCell?.contentView.addSubview(cycleScrollView)
+            return tableCell!
+        }else{
+            var tableCell = tableView.dequeueReusableCell(withIdentifier: "cell")
             if (tableCell == nil){
                 tableCell = UITableViewCell()
             }
@@ -124,6 +126,7 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         
     }
+    
     // MARK: Getter
     private lazy var homeHeadView: UIView = {
         let view = UIView.init(frame: CGRect(x:0,y:-100,width:kScreenWidth,height:tableOffsetY+100))

@@ -15,7 +15,7 @@ class WBMenuBtnView: UIView {
     let imageView = UIImageView.init()
     let imageHeight = 40
    
-     init(title:String,imageStr:String) {
+    init(title:String,imageStr:String) {
         super.init(frame: CGRect.zero)
         titleLabel.text = title
         titleLabel.textColor = RGB(r: 51, g: 51, b: 51)

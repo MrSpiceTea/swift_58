@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1870F2A9B173159E429A1C37 /* Pods_swift_58.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3484D190C8552A5187539D1D /* Pods_swift_58.framework */; };
 		515080661DDC4B5F009AE41E /* WBHomeTopLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515080651DDC4B5F009AE41E /* WBHomeTopLineCell.swift */; };
+		5168D4A81DDD56850013AB88 /* ZTCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5168D4A71DDD56850013AB88 /* ZTCycleScrollView.swift */; };
+		5168D4AA1DDD9A010013AB88 /* ZTCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5168D4A91DDD9A010013AB88 /* ZTCollectionViewCell.swift */; };
 		516C717F1DDAF13D00611C7A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516C717E1DDAF13D00611C7A /* SnapKit.framework */; };
 		516C71821DDAFC4400611C7A /* WBGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516C71811DDAFC4400611C7A /* WBGlobal.swift */; };
 		51759CB71DD952D7003FBFB2 /* WBHomeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */; };
@@ -28,6 +30,8 @@
 		304D9379F362CBAEAE12D230 /* Pods-swift_58.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_58.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_58/Pods-swift_58.release.xcconfig"; sourceTree = "<group>"; };
 		3484D190C8552A5187539D1D /* Pods_swift_58.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_58.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515080651DDC4B5F009AE41E /* WBHomeTopLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeTopLineCell.swift; sourceTree = "<group>"; };
+		5168D4A71DDD56850013AB88 /* ZTCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTCycleScrollView.swift; sourceTree = "<group>"; };
+		5168D4A91DDD9A010013AB88 /* ZTCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTCollectionViewCell.swift; sourceTree = "<group>"; };
 		516C717E1DDAF13D00611C7A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/swift_58-fcnvrvujlgozysdjshzubpokqvrk/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		516C71811DDAFC4400611C7A /* WBGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBGlobal.swift; sourceTree = "<group>"; };
 		51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeHistoryCell.swift; sourceTree = "<group>"; };
@@ -57,9 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5168D4A61DDD554D0013AB88 /* ZTCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5168D4A71DDD56850013AB88 /* ZTCycleScrollView.swift */,
+				5168D4A91DDD9A010013AB88 /* ZTCollectionViewCell.swift */,
+			);
+			name = ZTCycleScrollView;
+			sourceTree = "<group>";
+		};
 		516C71801DDAF26400611C7A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5168D4A61DDD554D0013AB88 /* ZTCycleScrollView */,
 				516C71811DDAFC4400611C7A /* WBGlobal.swift */,
 			);
 			name = Tool;
@@ -134,8 +148,8 @@
 		517A6B9E1DD446FD0045EB3C /* swift_58 */ = {
 			isa = PBXGroup;
 			children = (
-				516C71801DDAF26400611C7A /* Tool */,
 				5175AEFD1DD56C31004DB2B0 /* Home */,
+				516C71801DDAF26400611C7A /* Tool */,
 				5175AF0B1DD59AAF004DB2B0 /* Main */,
 				517A6BA61DD446FE0045EB3C /* Assets.xcassets */,
 				517A6BAB1DD446FE0045EB3C /* Info.plist */,
@@ -285,6 +299,7 @@
 			files = (
 				5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */,
 				516C71821DDAFC4400611C7A /* WBGlobal.swift in Sources */,
+				5168D4A81DDD56850013AB88 /* ZTCycleScrollView.swift in Sources */,
 				5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */,
 				517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */,
 				51759CBD1DD96E04003FBFB2 /* WBMenuBtnView.swift in Sources */,
@@ -292,6 +307,7 @@
 				515080661DDC4B5F009AE41E /* WBHomeTopLineCell.swift in Sources */,
 				51759CBB1DD9583C003FBFB2 /* WBHomeMenuCell.swift in Sources */,
 				5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */,
+				5168D4AA1DDD9A010013AB88 /* ZTCollectionViewCell.swift in Sources */,
 				51759CB71DD952D7003FBFB2 /* WBHomeHistoryCell.swift in Sources */,
 				5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */,
 			);
