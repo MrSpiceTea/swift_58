@@ -13,8 +13,9 @@ class ZTCollectionViewCell: UICollectionViewCell {
     var imageView:UIImageView
     
     override init(frame: CGRect) {
-        imageView = UIImageView.init()
+        imageView = UIImageView.init();
         super.init(frame: frame)
+        self.contentView.addSubview(imageView);
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,7 +23,15 @@ class ZTCollectionViewCell: UICollectionViewCell {
     }
     
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.imageView.frame = self.bounds
+    }
+    
+    
     lazy var titleLabel: UILabel = {
         return UILabel.init()
     }()
+    
+    
 }
