@@ -21,6 +21,10 @@
 		5175AF071DD597FF004DB2B0 /* WBNegotiationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */; };
 		5175AF0D1DD59F26004DB2B0 /* WBNaviationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */; };
 		5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */; };
+		5175C5C21DE685500070BD0A /* WBHeadTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175C5C11DE685500070BD0A /* WBHeadTitleViewCell.swift */; };
+		5175C5C61DE6954B0070BD0A /* WBMenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175C5C51DE6954B0070BD0A /* WBMenuCollectionView.swift */; };
+		5175C5C81DE6C5330070BD0A /* WBMenuCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175C5C71DE6C5330070BD0A /* WBMenuCCell.swift */; };
+		5175C5D01DE6E5B50070BD0A /* WBHouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175C5CF1DE6E5B50070BD0A /* WBHouseCell.swift */; };
 		517A6BA01DD446FD0045EB3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */; };
 		517A6BA71DD446FE0045EB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517A6BA61DD446FE0045EB3C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -42,6 +46,10 @@
 		5175AF061DD597FF004DB2B0 /* WBNegotiationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNegotiationViewController.swift; sourceTree = "<group>"; };
 		5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNaviationViewController.swift; sourceTree = "<group>"; };
 		5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBGridView.swift; sourceTree = "<group>"; };
+		5175C5C11DE685500070BD0A /* WBHeadTitleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHeadTitleViewCell.swift; sourceTree = "<group>"; };
+		5175C5C51DE6954B0070BD0A /* WBMenuCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMenuCollectionView.swift; sourceTree = "<group>"; };
+		5175C5C71DE6C5330070BD0A /* WBMenuCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMenuCCell.swift; sourceTree = "<group>"; };
+		5175C5CF1DE6E5B50070BD0A /* WBHouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHouseCell.swift; sourceTree = "<group>"; };
 		517A6B9C1DD446FD0045EB3C /* swift_58.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_58.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517A6B9F1DD446FD0045EB3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517A6BA61DD446FE0045EB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,10 +117,13 @@
 			isa = PBXGroup;
 			children = (
 				5175AF101DD5BEE3004DB2B0 /* WBGridView.swift */,
+				5175C5C11DE685500070BD0A /* WBHeadTitleViewCell.swift */,
 				51759CBC1DD96E04003FBFB2 /* WBMenuBtnView.swift */,
 				51759CB61DD952D7003FBFB2 /* WBHomeHistoryCell.swift */,
 				51759CBA1DD9583C003FBFB2 /* WBHomeMenuCell.swift */,
 				515080651DDC4B5F009AE41E /* WBHomeTopLineCell.swift */,
+				5175C5C51DE6954B0070BD0A /* WBMenuCollectionView.swift */,
+				5175C5C71DE6C5330070BD0A /* WBMenuCCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -125,6 +136,54 @@
 				5175AF0C1DD59F26004DB2B0 /* WBNaviationViewController.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		5175C5C91DE6DFC30070BD0A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				5175C5CA1DE6DFD20070BD0A /* Controller */,
+				5175C5CB1DE6DFD90070BD0A /* View */,
+				5175C5CC1DE6DFE00070BD0A /* Model */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		5175C5CA1DE6DFD20070BD0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5175C5CB1DE6DFD90070BD0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5175C5CE1DE6DFFB0070BD0A /* CCel */,
+				5175C5CD1DE6DFF30070BD0A /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5175C5CC1DE6DFE00070BD0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5175C5CD1DE6DFF30070BD0A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5175C5CF1DE6E5B50070BD0A /* WBHouseCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5175C5CE1DE6DFFB0070BD0A /* CCel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CCel;
 			sourceTree = "<group>";
 		};
 		517A6B931DD446FC0045EB3C = {
@@ -148,6 +207,7 @@
 		517A6B9E1DD446FD0045EB3C /* swift_58 */ = {
 			isa = PBXGroup;
 			children = (
+				5175C5C91DE6DFC30070BD0A /* Public */,
 				5175AEFD1DD56C31004DB2B0 /* Home */,
 				516C71801DDAF26400611C7A /* Tool */,
 				5175AF0B1DD59AAF004DB2B0 /* Main */,
@@ -305,10 +365,14 @@
 				51759CBD1DD96E04003FBFB2 /* WBMenuBtnView.swift in Sources */,
 				5175AF051DD597E7004DB2B0 /* WBHomeViewController.swift in Sources */,
 				515080661DDC4B5F009AE41E /* WBHomeTopLineCell.swift in Sources */,
+				5175C5C21DE685500070BD0A /* WBHeadTitleViewCell.swift in Sources */,
+				5175C5C61DE6954B0070BD0A /* WBMenuCollectionView.swift in Sources */,
 				51759CBB1DD9583C003FBFB2 /* WBHomeMenuCell.swift in Sources */,
 				5175AF111DD5BEE3004DB2B0 /* WBGridView.swift in Sources */,
+				5175C5D01DE6E5B50070BD0A /* WBHouseCell.swift in Sources */,
 				5168D4AA1DDD9A010013AB88 /* ZTCollectionViewCell.swift in Sources */,
 				51759CB71DD952D7003FBFB2 /* WBHomeHistoryCell.swift in Sources */,
+				5175C5C81DE6C5330070BD0A /* WBMenuCCell.swift in Sources */,
 				5175AF011DD5735A004DB2B0 /* WBTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
