@@ -10,6 +10,9 @@ import UIKit
 
 let fcell = "fcell"
 let tableOffsetY:CGFloat = 125
+let headerViewHeight:CGFloat = 300
+let headerViewMinimumHeight:CGFloat = 64
+
 
 class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -40,8 +43,8 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         tableView.register(WBHouseCell.self, forCellReuseIdentifier: WBHouseCellID)
         tableView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
         self.tableView = tableView
+        self.tableView.addSubview(self.homeHeadView)
         self.view.addSubview(tableView)
-        self.view.addSubview(self.homeHeadView)
     }
     
     // MARK: TableViewDelegate
@@ -165,24 +168,19 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     // MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offy:CGFloat = -scrollView.contentOffset.y - tableOffsetY
-        if offy > -64{
-            self.homeHeadView.frame.origin.y = -100+offy
-        }else{
-            
-        }
+
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        let offy:CGFloat = -scrollView.contentOffset.y-tableOffsetY
-//        if offy > -40 && offy < -20{
-//            scrollView.setContentOffset(CGPoint(x:0,y:-tableOffsetY+40), animated: true)
-//        }
-//        
-//        if offy >= -20 && offy < 0{
-//            scrollView.setContentOffset(CGPoint(x:0,y:-tableOffsetY), animated: true)
-//        }
-//        
+        let offsetY =  self.tableView.contentOffset.y
+        let relativeHeight = -offsetY
+        print(offsetY)
+        if relativeHeight > headerViewMinimumHeight && relativeHeight < headerViewMinimumHeight + 20{
+            scrollView.setContentOffset(CGPoint(x:0,y:-headerViewMinimumHeight), animated: true)
+        }
+        if relativeHeight < tableOffsetY && relativeHeight > tableOffsetY - 20{
+            scrollView.setContentOffset(CGPoint(x:0,y:-tableOffsetY), animated: true)
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -196,17 +194,15 @@ class WBHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     // MARK:KVO
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        let offsetY =  -self.tableView.contentOffset.y - tableOffsetY
-//        if offsetY > -40 {
-//             self.homeHeadView.frame.origin.y = -100+offsetY
-//        }
-        
+        let offsetY =  self.tableView.contentOffset.y //+ self.tableView.contentInset.top - headerViewHeight
+        let relativeHeight = -offsetY
+        self.homeHeadView.frame = CGRect(x:0,y:offsetY,width:kScreenWidth,height:max(relativeHeight, headerViewMinimumHeight))
     }
     
     // MARK: Getter
     private lazy var homeHeadView: UIView = {
-        let view = UIView.init(frame: CGRect(x:0,y:-100,width:kScreenWidth,height:tableOffsetY+100))
-        view.backgroundColor = RGB(r: 255, g: 75, b: 40)
+        let view = UIView.init(frame: CGRect(x:0,y:-headerViewHeight,width:kScreenWidth,height:headerViewHeight))
+        view.backgroundColor = RGBA(r: 255, g: 75, b: 40, a: 0.9)
         return view
     }()
     
